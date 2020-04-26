@@ -2,12 +2,13 @@ language: java
 jdk:
 - openjdk8
 
+script: 
+- ant build
+- sonar-scanner
+
 addons:
   sonarcloud:
     organization: "daxwagner"
     token:
   secure: "BrYFVaDerEOTVB9mQ1EDaaj4QJ+SeY1gL9wtbeR3ptkg/IsznrAv9NQnJtlWqt3GWkcvcjxfpnrKsBWXksRKtolAyxZX+m74rXWqNq1Q8bTHCTMdiZv5DTMPKNBdR48Q+VaOWh0b3u06rTdOU9l+LXU5k612NHz/WQiBoAwLjFMZKUs6slLKbmUe8ZGFrHu/dH8khqGGijNoTrxCZ7Q+wOB+Xh+LB73RSfiaZm8V63Yfa4x4HBQbxS69w39nUjxaag1BEBIIAO7ufEt82pRhFkVAuF5hFOZ5xcmore4zmzPlW6baIf6UZbGuHbAaELpTME5f5sgnNI8TyXpwD7ZeyTeKMLAkFaypnsk531piBigQwOgAmZlx9OOvUuXmWNZr/9tWef+pmvfvFTcQOdFGPHuAwOOzk5wqydMiDrtNED0SSBhzJW8K8/t3HSbYki0nQE62VErLinGXZxPCU6B+2ogJjupUZZRxWmlAA0XCIjunGm2NNUMd/Eyu2Oj5RFCvg8mdNg4ikaPmttAPipxXN8tDVJ6YBY8gY5tHaeQ0Up2wCRfvWOUvrwDUttCo1wHVPLfkWBmE2+i83iLJ6xWWIunDIRJSpstiXFmNBT/WF8XBS46PjqqLl8ozdlWumQEixfm0riUDT7BMs5SPG3bkI6tumFM+nGOTHEhiJ6egARo="
 
-script: 
-- ant build
-- sonar-scanner
